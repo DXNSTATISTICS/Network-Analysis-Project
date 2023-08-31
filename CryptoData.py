@@ -167,7 +167,7 @@ dfALL = pd.DataFrame({'BTC': dfBTC['close'].diff(),
                       'DOGE': dfDOGE['close'].diff(),
                       'ELON': dfELON['close'].diff(),
                       'LTC': dfLTC['close'].diff(),
-                      'MIM': dfMIM['close'].diff(),
+                      #'MIM': dfMIM['close'].diff(),
                       'PAXG': dfPAXG['close'].diff(),
                       'SHIB': dfSHIB['close'].diff(),
                       'USDC': dfUSDC['close'].diff(),
@@ -222,11 +222,11 @@ dfALL = pd.DataFrame({'BTC': dfBTC['close'].diff(),
                       'SAND': dfSAND['close'].diff()})
 
 dfALL = dfALL.dropna()
-dfALL.t
+dfALL
 
 # An assets Covariance to Itself is the Variance
 dfCOV = dfALL.cov()
-
+dfCOV.to_excel('Cov2.xlsx')
 # An assets correlation to itself is 1
 dfCORR = dfALL.corr()
 
